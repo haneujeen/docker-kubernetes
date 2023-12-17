@@ -1,8 +1,10 @@
 # Specify a base image
-FROM alpine
+# Base image with node.jd & npm installed:
+FROM node:14-alpine
 
-# Install dependaencies
-RUN npm Install
+# Install dependencies
+COPY ./ ./
+RUN npm install
 
 # Default startup command
 CMD ["npm", "start"]
