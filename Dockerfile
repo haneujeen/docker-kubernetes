@@ -1,8 +1,8 @@
 # Specify a base image
 # Base image with node.jd & npm installed:
-FROM node:14-alpine
+FROM node:alpine
 
-WORKDIR /usr/app
+WORKDIR '/app'
 
 # Install dependencies
 COPY ./package.json ./
