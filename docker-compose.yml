@@ -7,6 +7,8 @@ services:
 
     # Run the Node app container
     node-app:
+        # Restarts unless it is explicitly stopped
+        restart: always
         # Docker CLI equivalent for building the image: docker build -t node-app .
         build: .
         # Docker CLI equivalent for running the container: docker run -d --name node-app --network app-network -p 8081:8081 node-app
